@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- stiles -->
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        * {
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+        .wrapper {
+            max-width: 500px;
+            margin: auto;
+            padding-top: 70px;
+        }
+
+        /* form request part */
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn, .input {
+            margin-bottom: 30px;
+            padding: 10px;
+            border: 2px solid wheat;
+            border-radius: 15px;
+            font-size: 600;
+        }
+
+        .input {
+            width: 100%;
+        }
+
+
+        .btn {
+            width: fit-content;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-weight: bold;
+
+            cursor: pointer;
+            transition: background-color .3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: rgb(244, 206, 134);
+        }
+        .btn:active {
+            background-color: rgb(202, 169, 107);
+        }
+
+        /* time response part */
+        .time {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .time__data {
+            min-width: 70px;
+            min-height: 70px;
+            padding: 10px;
+            border-radius: 15px;
+            font-size: 2rem;
+            text-align: center;
+            line-height: calc(70px - 10px * 2);
+            background-color: wheat;
+        }
+
+        .time__title {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+    </style>
+
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1 contenteditable="true" title="You can change this TITLE!_-_!">Time challenge \(-_-)/</h1>
+        <form class="form" action="#">
+            <input class="input" type="number" min="0" placeholder="set hours: " name="time" id="hours">
+            <input class="input" type="number" min="0" placeholder="set minutes: " name="time" id="minutes">
+            <input class="input" type="number" min="0" placeholder="set secinds: " name="time" id="seconds">
+        
+            <button class="btn">Run Time</button>
+        </form>
+    
+    
+        <ul class="time">
+            <li class="time__item">
+                <h2 class="time__title">Days:</h2>
+                <div class="time__data time__data_day">-</div>
+            </li>
+            <li class="time__item">
+                <h2 class="time__title">Hours:</h2>
+                <div class="time__data time__data_hour">-</div>
+            </li>
+            <li class="time__item">
+                <h2 class="time__title">Minutes:</h2>
+                <div class="time__data time__data_minute">-</div>
+            </li>
+            <li class="time__item">
+                <h2 class="time__title">Seconds:</h2>
+                <div class="time__data time__data_second">-</div>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
